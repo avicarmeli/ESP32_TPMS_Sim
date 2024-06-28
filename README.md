@@ -12,7 +12,7 @@ RF signal generator to simulate 433Mhz Renault TPMS sensor. The Simulator uses E
 - **Total                under 7$**
 
 ### Wiering:
-See wiering diagram in [DOCS](https://github.com/avicarmeli/TPMS-SDR/blob/main/Docs/ESP-SDR%20connection%20diagram.md).
+See wiering [diagram](https://github.com/avicarmeli/ESP32_TPMS_Sim/blob/main/Connection%20Diagram.md).
 
 ## Code:
 ### installation:
@@ -21,24 +21,15 @@ See wiering diagram in [DOCS](https://github.com/avicarmeli/TPMS-SDR/blob/main/D
 - ESP32 Board (I use DEV Kit).
 - CC1101 Board (I use 8 pins TZT CC1101).
 - Install in Arduio IDE the following libraries:
-  - TickTwo
-  - BLEDevice
-  - BLEUtils.h
-  - BLEServer.h
+  - ELECHOUSE_CC1101_SRC_DRV
 - locate the directory where Arduino IDE stores the projects (for windows usually in Arduino folder under DOCS).
 - Download Zip file of the repo using the Green **Code** pull down on the upper right corner of this page.
 - Unzip the foldeer into the Arduino projects folder you located.
 
-#### Configs:
-- Opened Arduino IDE.
-- Open the TPMS-SDR project.
-- Navigate to the *configs.h* tab and at line 93 insert you RF TPMS ID for each tire.
-- Make sure to select in the config.h file the type of car sensors you have.
-- Under Tools menu select your board type.
-- Connect your board to the USB port.
-- Under the Tools menu select your COM port.
 
 #### Upload:
+- Opened Arduino IDE.
+- Open the ESP32_TPMS_Sim project.
 - Hit the upload button on the upper left corner (right arrow icon).
 - If there are any errors follow the messages (most likely it is missing library).
 - Depend on the board you use you might need to manually put your board into upload mode (usually holding both push buttons then releasing the reset butteon and only after a second or so the other button).
